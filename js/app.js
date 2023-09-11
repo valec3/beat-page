@@ -26,3 +26,8 @@ function scrollHeader(){
         header.classList.remove("scroll-header");
 }
 window.addEventListener("scroll", scrollHeader);
+
+// prevent event default global
+window.addEventListener("click", (e) => {
+    e.preventDefault();
+});

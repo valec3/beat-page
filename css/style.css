@@ -21,18 +21,18 @@
     --white-color: #FFF;
     --body-color: hsl(var(--hue-color), 4%, 6%);
     --container-color: hsl(var(--hue-color), 4%, 10%);
-    --text-gradient: linear-gradient(hsl(var(--hue-color), 4%, 24%), hsl(var(--hue-color), 4%, 8%));
+    --text-gradient: linear-gradient(hsl(240, 1%, 23%), hsl(180, 4%, 84%));
     --scroll-thumb-color: hsl(var(--hue-color), 4%, 16%);
     --scroll-thumb-color-alt: hsl(var(--hue-color), 4%, 20%);
     /*========== Fonts and typography ==========*/
     --body-font: 'Poppins', sans-serif;
     --biggest-font-size: 5rem;
-    --bigger-font-size: 3.5rem;
+    --bigger-font-size: 2.6rem;
     --big-font-size: 2.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
+    --h2-font-size: 1rem;
+    --h3-font-size: 1.1rem;
     --normal-font-size: .938rem;
-    --small-font-size: .813rem;
+    --small-font-size: .6rem;
     --smaller-font-size: .75rem;
     --text-line-height: 2rem;
     /*========== z index ==========*/
@@ -43,7 +43,7 @@
 @media screen and (min-width: 968px) {
     :root {
         --biggest-font-size: 7.5rem;
-        --bigger-font-size: 4.5rem;
+        --bigger-font-size: 4rem;
         --big-font-size: 4rem;
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.25rem;
@@ -151,18 +151,19 @@ img{
 }
 .button{
     display: inline-block;
-    background: var(--black-color);
+    background: #141414;
     color: white;
     padding: 1rem 1.25rem;
     border-radius: .5rem;
     transition: .3s;
     border: 1px solid transparent;
 }
-.button:active{
+.button:focus{
     border: 1px solid var(--white-color);
 }
 .button:hover{
-    background: var(--black-color-alt);
+    background: #1b1a1a;
+    border: 1px solid var(--white-color);
 }
 .button__icon{
     font-size: 1.2rem;
@@ -356,6 +357,7 @@ img{
     gap: 5rem;
     justify-content: center;
     align-items: center;
+    justify-items: center;
 }
 
 
@@ -424,7 +426,91 @@ img{
 }
 
 
+/*-----------------------------------*\
+    #DISCOUNT
+\*-----------------------------------*/
 
+.discount__container{
+    position: relative;
+    background-color: var(--container-color);
+    padding: 2rem 1.5rem;
+    border-radius: .8rem;
+}
+
+.discount__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: .75rem;
+}
+.discount__description{
+    margin-bottom: 1rem;
+}
+
+.discount__img{
+    width: 300px;
+    position: absolute;
+    top: 1rem;
+    right: -11rem;
+}
+
+/*-----------------------------------*\
+    #PRODUCTS
+\*-----------------------------------*/
+
+.products__line{
+    line-height: 4rem;
+}
+
+.products__container{
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem 3rem;
+    padding-top: 3rem;
+}
+.products__card{
+    height: 120px;
+    position: relative;
+    background-color: var(--container-color);
+    padding: .75rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+.products__card:hover .products__img{
+    transform: translateY(-50px);
+    transition: .3s linear;
+}
+    
+.products__content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.products__text{
+    margin-top:3rem ;
+}
+
+.products__img{
+    top: 0;
+    position: absolute;
+    width: 80px;
+    transform: translateY(-40px);
+    transition: .3s linear;
+
+}
+
+
+.products__title,
+.products__price{
+    font-size: var(--small-font-size);
+}
+.products__price{
+    font-weight: 600;
+}
+.products__button{
+    padding: .2rem;
+}
 /*-----------------------------------*\
     #FOOTER
 \*-----------------------------------*/
