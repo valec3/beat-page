@@ -224,6 +224,7 @@ img{
     font-size: 1.2rem;
     color:var(--white-color);
     cursor: pointer;
+    display: flex;
 }
 
 .nav__list{
@@ -261,7 +262,9 @@ img{
     -webkit-background-clip: text;
     background-clip: text;
 }
-
+.nav__link.active-link{
+    color: var(--white-color);
+}
 .nav__link:hover{
     background: #fff;
     color: transparent;
@@ -288,9 +291,7 @@ img{
 .nav__close{
     display: none;
 }
-.nav__toggle{
-    display: flex;
-}
+
 .nav.active .nav__toggle{
     display: none;
 }
@@ -514,8 +515,100 @@ img{
 /*-----------------------------------*\
     #FOOTER
 \*-----------------------------------*/
+.footer{
+    padding: 0 1rem;
+}
+
+.footer__container{
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 1rem 2rem;
+}
+.footer__logo{
+    width: 2rem;
+}
+.footer-col-2{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__form{
+    display: flex;
+    justify-content: space-between;
+    background: var(--container-color);
+}
+.footer__input{
+    width: 75%;
+    outline: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    color: #fff;
+}
+.footer__input::placeholder{
+    color: #fff;
+}
+
+.footer__social{
+    padding: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    color: var(--white-color);
+}
+
+.footer__social-link{
+    display: flex;
+    align-items: center;
+    background: var(--container-color);
+    color: var(--white-color);
+    padding: .5rem;
+    border-radius: .25rem;
+    font-size: 1rem;
+}
+.footer__social-link:hover{
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.footer__copy{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.footer__copy-link{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
 
 
+/*-----------------------------------*\
+    #SCROLL TOP
+\*-----------------------------------*/
+.scroll-up{
+    display: none;
+    position: fixed;
+    right: 1rem;
+    bottom: 5rem;
+    border-radius: .25rem;
+    padding: .45rem;
+    background: var(--container-color);
+    color: #fff;
+    z-index: var(--z-tooltip);
+    transition: .4s ease-in-out;
+}
+
+.scroll-up:hover{
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.scroll__icon{
+    color: var(--white-color);
+    font-size: 1.4rem;
+}
+
+.scroll-up.show-scroll{
+    display: block;
+}
 
 
 
